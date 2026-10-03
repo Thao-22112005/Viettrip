@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "VietTrip.NotificationService.Controllers.NotificationsController",
+    "Method": "TestEmail",
+    "RelativePath": "api/notifications/test-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "VietTrip.NotificationService.Controllers.TestEmailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,790 @@
+/* =========================================
+   PROFILE PAGE
+   VietTrip Blue / White Theme
+========================================= */
+
+.profile-page-j {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8fbff;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.profile-hero-j {
+    width: 100%;
+    padding: 42px 24px;
+
+    background: linear-gradient(135deg,
+            #eff6ff 0%,
+            #ffffff 100%);
+
+    border-bottom: 1px solid #e5eef9;
+
+    box-sizing: border-box;
+}
+
+.profile-hero-content-j {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.profile-breadcrumb-j {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #64748b;
+    font-size: 13px;
+}
+
+.profile-breadcrumb-j a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.profile-breadcrumb-j a:hover {
+    color: #1d4ed8;
+}
+
+.profile-hero-j h1 {
+    margin: 0 0 8px;
+
+    color: #1e293b;
+
+    font-size: 34px;
+    font-weight: 750;
+}
+
+.profile-hero-j p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.profile-container-j {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    padding: 32px 24px 60px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================
+   PROFILE OVERVIEW
+========================================= */
+
+.profile-overview-j {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 28px;
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5eef9;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.05);
+}
+
+.profile-avatar-j {
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #2563eb;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.profile-user-info-j {
+    flex: 1;
+}
+
+.profile-user-info-j h2 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 21px;
+}
+
+.profile-user-info-j p {
+    margin: 0 0 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.profile-member-j {
+    display: inline-flex;
+
+    padding: 4px 9px;
+
+    color: #2563eb;
+
+    background: #eff6ff;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.profile-edit-button-j {
+    padding: 10px 16px;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.profile-edit-button-j:hover {
+    background: #eff6ff;
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.profile-layout-j {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 24px;
+
+    align-items: start;
+}
+
+.profile-main-j {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.profile-card-j,
+.profile-sidebar-card-j,
+.profile-help-card-j {
+    background: #ffffff;
+
+    border: 1px solid #e5eef9;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.04);
+}
+
+.profile-card-j {
+    padding: 24px;
+}
+
+.profile-card-header-j {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+}
+
+.profile-card-header-j h3 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 18px;
+}
+
+.profile-card-header-j p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.profile-form-grid-j {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.profile-form-group-j {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profile-form-group-j.full-width {
+    grid-column: 1 / -1;
+}
+
+.profile-form-group-j label {
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-form-group-j input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 13px;
+
+    border: 1px solid #dbe3ee;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.profile-form-group-j input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.profile-value-j {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.verified-badge-j {
+    padding: 3px 7px;
+
+    color: #15803d;
+
+    background: #f0fdf4;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.profile-form-actions-j {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-top: 22px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eef2f7;
+}
+
+.cancel-button-j,
+.save-button-j {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.cancel-button-j {
+    border: 1px solid #dbe3ee;
+
+    background: #ffffff;
+
+    color: #64748b;
+}
+
+.save-button-j {
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+.save-button-j:hover {
+    background: #1d4ed8;
+}
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.security-row-j {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px;
+
+    background: #f8fbff;
+
+    border: 1px solid #e5eef9;
+    border-radius: 10px;
+}
+
+.security-icon-j {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eff6ff;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+.security-info-j {
+    flex: 1;
+}
+
+.security-info-j h4 {
+    margin: 0 0 4px;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.security-info-j p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.security-button-j {
+    padding: 8px 13px;
+
+    border: 1px solid #bfdbfe;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.security-button-j:hover {
+    background: #eff6ff;
+}
+
+.change-password-box-j {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin-top: 18px;
+    padding: 18px;
+
+    background: #f8fbff;
+
+    border: 1px solid #e5eef9;
+    border-radius: 10px;
+}
+
+/* =========================================
+   RECENT BOOKINGS
+========================================= */
+
+.view-all-link-j {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.view-all-link-j:hover {
+    color: #1d4ed8;
+}
+
+.recent-bookings-j {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-booking-j {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eef2f7;
+
+    text-decoration: none;
+}
+
+.recent-booking-j:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.recent-booking-j:first-child {
+    padding-top: 0;
+}
+
+.recent-booking-icon-j {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #eff6ff;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+.recent-booking-info-j {
+    flex: 1;
+}
+
+.recent-booking-info-j h4 {
+    margin: 0 0 5px;
+
+    color: #1e293b;
+
+    font-size: 14px;
+}
+
+.recent-booking-info-j p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.recent-booking-right-j {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.recent-booking-right-j strong {
+    color: #1e293b;
+
+    font-size: 13px;
+}
+
+.booking-status-j {
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.booking-status-j.confirmed {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.booking-status-j.completed {
+    color: #15803d;
+    background: #f0fdf4;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.profile-sidebar-j {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-sidebar-card-j {
+    padding: 18px;
+}
+
+.profile-sidebar-card-j h3 {
+    margin: 0 0 12px;
+
+    color: #1e293b;
+
+    font-size: 16px;
+}
+
+.sidebar-menu-j {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px 10px;
+
+    border-radius: 8px;
+
+    color: #475569;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu-j span {
+    width: 22px;
+
+    text-align: center;
+}
+
+.sidebar-menu-j:hover {
+    background: #f8fbff;
+    color: #2563eb;
+}
+
+.sidebar-menu-j.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* =========================================
+   HELP
+========================================= */
+
+.profile-help-card-j {
+    padding: 22px;
+
+    text-align: center;
+}
+
+.help-icon-j {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 12px;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.profile-help-card-j h3 {
+    margin: 0 0 7px;
+
+    color: #1e293b;
+
+    font-size: 16px;
+}
+
+.profile-help-card-j p {
+    margin: 0 0 14px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.profile-help-card-j a {
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.profile-help-card-j a:hover {
+    color: #1d4ed8;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    .profile-layout-j {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar-j {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .profile-hero-j {
+        padding: 32px 18px;
+    }
+
+    .profile-hero-j h1 {
+        font-size: 28px;
+    }
+
+    .profile-container-j {
+        padding: 24px 16px 40px;
+    }
+
+    .profile-overview-j {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .profile-edit-button-j {
+        width: 100%;
+    }
+
+    .profile-form-grid-j {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form-group-j.full-width {
+        grid-column: auto;
+    }
+
+    .profile-sidebar-j {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-booking-j {
+        align-items: flex-start;
+    }
+
+    .recent-booking-right-j {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .profile-overview-j {
+        padding: 18px;
+    }
+
+    .profile-avatar-j {
+        width: 62px;
+        height: 62px;
+
+        font-size: 18px;
+    }
+
+    .profile-user-info-j h2 {
+        font-size: 18px;
+    }
+
+    .profile-card-j {
+        padding: 18px;
+    }
+
+    .profile-card-header-j {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-form-actions-j {
+        flex-direction: column;
+    }
+
+    .cancel-button-j,
+    .save-button-j {
+        width: 100%;
+    }
+}
+
+.save-button-j:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.save-button-j:disabled,
+.cancel-button-j:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

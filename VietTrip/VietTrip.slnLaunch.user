@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "VietTrip.Gateway\\VietTrip.Gateway.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.AuthService\\VietTrip.AuthService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.CategoryService\\VietTrip.CategoryService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.DestinationService\\VietTrip.DestinationService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.TourService\\VietTrip.TourService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.ReviewService\\VietTrip.ReviewService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.BookingService\\VietTrip.BookingService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.MediaService\\VietTrip.MediaService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.PaymentService\\VietTrip.PaymentService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "VietTrip.NotificationService\\VietTrip.NotificationService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

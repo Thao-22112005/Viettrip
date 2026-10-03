@@ -1,0 +1,360 @@
+/* ================================
+   PAGE
+================================ */
+
+.success-page {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    justify-content: center;
+
+    background: #f7fafc;
+}
+
+.success-container {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 55px 24px 70px;
+
+    text-align: center;
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7f8f1;
+
+    color: #15966f;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.success-container h1 {
+    margin: 0;
+
+    color: #12304a;
+
+    font-size: 28px;
+}
+
+.success-description {
+    max-width: 520px;
+
+    margin: 12px auto 25px;
+
+    color: #718091;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   BOOKING CODE
+================================ */
+
+.booking-code-box {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 9px 15px;
+
+    border: 1px solid #dbe8f2;
+    border-radius: 6px;
+
+    background: #ffffff;
+}
+
+.booking-code-box span {
+    color: #8996a5;
+
+    font-size: 11px;
+}
+
+.booking-code-box strong {
+    color: #0879e8;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.success-card {
+    margin-top: 25px;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3ebf2;
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+.success-card h2 {
+    margin: 0 0 18px;
+
+    color: #263e52;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   TOUR
+================================ */
+
+.success-tour {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.tour-placeholder {
+    width: 70px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: #eaf5ff;
+
+    font-size: 25px;
+}
+
+.success-tour h3 {
+    margin: 0 0 5px;
+
+    color: #263e52;
+
+    font-size: 13px;
+}
+
+.success-tour span {
+    color: #8996a5;
+
+    font-size: 10px;
+}
+
+
+/* ================================
+   DETAILS
+================================ */
+
+.success-details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding-top: 20px;
+}
+
+.success-details div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.success-details span {
+    color: #8996a5;
+
+    font-size: 10px;
+}
+
+.success-details strong {
+    color: #345069;
+
+    font-size: 12px;
+}
+
+.success-details .success-price {
+    color: #ef4d42;
+
+    font-size: 15px;
+}
+
+
+/* ================================
+   NOTICE
+================================ */
+
+.success-notice {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 16px;
+    padding: 16px;
+
+    border: 1px solid #dcebf7;
+    border-radius: 7px;
+
+    background: #f5faff;
+
+    text-align: left;
+}
+
+.notice-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e4f1ff;
+
+    color: #0879e8;
+
+    font-size: 15px;
+}
+
+.success-notice strong {
+    color: #345069;
+
+    font-size: 11px;
+}
+
+.success-notice p {
+    margin: 5px 0 0;
+
+    color: #718091;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.success-actions a {
+    padding: 10px 20px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.home-button {
+    border: 1px solid #d8e2ec;
+
+    background: #ffffff;
+
+    color: #526273;
+}
+
+.home-button:hover {
+    border-color: #0879e8;
+
+    color: #0879e8;
+}
+
+.booking-button {
+    background: #0879e8;
+
+    color: #ffffff;
+}
+
+.booking-button:hover {
+    background: #0668c9;
+
+    transform: translateY(-1px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    .success-container {
+        padding: 40px 16px 50px;
+    }
+
+    .success-container h1 {
+        font-size: 23px;
+    }
+
+    .success-card {
+        padding: 18px;
+    }
+
+    .success-details {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions a {
+        width: 100%;
+
+        text-align: center;
+    }
+}

@@ -1,0 +1,6 @@
+@VietTrip.PaymentService_HostAddress = http://localhost:5133
+
+GET {{VietTrip.PaymentService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

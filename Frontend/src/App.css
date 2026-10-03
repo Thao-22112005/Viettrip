@@ -1,0 +1,296 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8eef5;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #12304a;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 2px;
+}
+
+.logo-icon span {
+  display: block;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.logo-icon span:first-child {
+  width: 30px;
+  background-color: #08a6a6;
+
+  transform: skewX(-25deg);
+}
+
+.logo-icon span:last-child {
+  width: 36px;
+  background-color: #0879e8;
+
+  transform: skewX(-25deg);
+}
+
+.logo-text {
+  font-size: 23px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+
+  color: #12304a;
+}
+
+.logo-text span {
+  color: #0879e8;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+}
+
+.nav-link {
+  position: relative;
+
+  color: #526273;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 26px 0;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #0879e8;
+}
+
+.nav-link.active {
+  color: #0879e8;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 16px;
+
+  height: 2px;
+
+  border-radius: 2px;
+
+  background-color: #08a6a6;
+}
+
+
+/* ================================
+   ACTIONS
+================================ */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+/* ================================
+   SEARCH
+================================ */
+
+.navbar-search {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: #526273;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.navbar-search:hover {
+  color: #0879e8;
+}
+
+
+/* ================================
+   LOGIN
+================================ */
+
+.btn-login {
+  padding: 9px 17px;
+
+  border: 1px solid #d8e2ec;
+  border-radius: 7px;
+
+  background-color: #ffffff;
+  color: #345069;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.btn-login:hover {
+  border-color: #0879e8;
+  color: #0879e8;
+}
+
+
+/* ================================
+   REGISTER
+================================ */
+
+.btn-register {
+  padding: 10px 18px;
+
+  border-radius: 7px;
+
+  background-color: #0879e8;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.btn-register:hover {
+  background-color: #0668c9;
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .navbar-menu {
+    gap: 18px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+}
+
+
+@media (max-width: 750px) {
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .btn-login {
+    display: none;
+  }
+}

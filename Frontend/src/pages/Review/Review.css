@@ -1,0 +1,578 @@
+.review-page {
+    min-height: 100vh;
+    background: #f6f8fb;
+    padding: 32px 0 70px;
+}
+
+.review-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.review-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: #8a94a6;
+}
+
+.review-breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.review-breadcrumb a:hover {
+    color: #0f766e;
+}
+
+.review-breadcrumb span:last-child {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.review-header {
+    margin-bottom: 28px;
+}
+
+.review-header h1 {
+    margin: 0 0 9px;
+    color: #172033;
+    font-size: 32px;
+}
+
+.review-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.review-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
+}
+
+.review-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 3px 15px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================
+   TOUR
+========================= */
+
+.tour-review-info {
+    display: flex;
+    gap: 20px;
+}
+
+.tour-review-info img {
+    width: 220px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.tour-review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.completed-label {
+    width: fit-content;
+    margin-bottom: 9px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tour-review-content h2 {
+    margin: 0 0 13px;
+    color: #172033;
+    font-size: 21px;
+}
+
+.tour-review-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.review-section-title {
+    margin-bottom: 24px;
+}
+
+.review-section-title h2 {
+    margin: 0 0 7px;
+    color: #172033;
+    font-size: 19px;
+}
+
+.review-section-title p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.rating-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0 4px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.star {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #d7dee7;
+    font-size: 48px;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.star:hover {
+    transform: scale(1.08);
+}
+
+.star.active {
+    color: #f59e0b;
+}
+
+.rating-text {
+    min-height: 22px;
+    margin: 15px 0 0;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.review-card textarea {
+    width: 100%;
+    min-height: 160px;
+    box-sizing: border-box;
+    resize: vertical;
+    border: 1px solid #dce3ea;
+    border-radius: 12px;
+    padding: 16px;
+    outline: none;
+    color: #334155;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: 0.2s;
+}
+
+.review-card textarea::placeholder {
+    color: #a3adba;
+}
+
+.review-card textarea:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.08);
+}
+
+.textarea-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 8px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload-box {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.upload-icon {
+    margin-bottom: 4px;
+    font-size: 30px;
+}
+
+.upload-box strong {
+    color: #475569;
+    font-size: 14px;
+}
+
+.upload-box span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* =========================
+   TIPS
+========================= */
+
+.review-tips h2 {
+    margin: 0 0 22px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.tip-item:first-of-type {
+    padding-top: 0;
+}
+
+.tip-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.tip-item > span {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #ecfdf5;
+    color: #0f766e;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.tip-item p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.review-submit-card {
+    position: sticky;
+    top: 24px;
+}
+
+.submit-summary {
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.submit-summary > span {
+    display: block;
+    margin-bottom: 10px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.mini-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.mini-stars span {
+    color: #d7dee7;
+    font-size: 22px;
+}
+
+.mini-stars span.active {
+    color: #f59e0b;
+}
+
+.submit-review-button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: #0f766e;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.submit-review-button:hover {
+    background: #115e59;
+}
+
+.cancel-review-link {
+    display: block;
+    margin-top: 13px;
+    color: #64748b;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.cancel-review-link:hover {
+    color: #0f766e;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.review-success-container {
+    width: calc(100% - 64px);
+    max-width: 650px;
+    margin: 70px auto;
+    padding: 48px 35px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.06);
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.review-success-container h1 {
+    margin: 0 0 12px;
+    color: #172033;
+    font-size: 28px;
+}
+
+.review-success-container > p {
+    max-width: 480px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.success-rating {
+    margin: 22px 0;
+    color: #f59e0b;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+    min-width: 160px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-button {
+    background: #0f766e;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #115e59;
+}
+
+.secondary-button {
+    border: 1px solid #dbe2e8;
+    color: #475569;
+    background: #ffffff;
+}
+
+.secondary-button:hover {
+    background: #f8fafc;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .review-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .review-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-submit-card {
+        position: static;
+    }
+}
+
+@media (max-width: 700px) {
+    .review-page {
+        padding: 24px 0 50px;
+    }
+
+    .review-container {
+        padding: 0 16px;
+    }
+
+    .review-header h1 {
+        font-size: 26px;
+    }
+
+    .review-card {
+        padding: 18px;
+        border-radius: 13px;
+    }
+
+    .tour-review-info {
+        flex-direction: column;
+    }
+
+    .tour-review-info img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .star {
+        font-size: 40px;
+    }
+
+    .review-sidebar {
+        display: flex;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .review-breadcrumb {
+        gap: 7px;
+        font-size: 12px;
+    }
+
+    .review-header h1 {
+        font-size: 23px;
+    }
+
+    .stars {
+        gap: 4px;
+    }
+
+    .star {
+        font-size: 35px;
+    }
+
+    .textarea-footer {
+        flex-direction: column;
+    }
+
+    .review-success-container {
+        width: calc(100% - 32px);
+        padding: 35px 20px;
+    }
+
+    .review-success-container h1 {
+        font-size: 23px;
+    }
+}

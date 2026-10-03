@@ -1,0 +1,6 @@
+@VietTrip.NotificationService_HostAddress = http://localhost:5062
+
+GET {{VietTrip.NotificationService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

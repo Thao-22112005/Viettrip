@@ -1,0 +1,202 @@
+[
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Destinations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "Create",
+    "RelativePath": "api/Destinations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "VietTrip.DestinationService.DTOs.CreateDestinationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationHighlightsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Destinations/{destinationId}/highlights",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "destinationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationHighlightsController",
+    "Method": "Create",
+    "RelativePath": "api/Destinations/{destinationId}/highlights",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "destinationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "VietTrip.DestinationService.DTOs.CreateDestinationHighlightRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationHighlightsController",
+    "Method": "GetById",
+    "RelativePath": "api/Destinations/{destinationId}/highlights/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "destinationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationHighlightsController",
+    "Method": "Update",
+    "RelativePath": "api/Destinations/{destinationId}/highlights/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "destinationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "VietTrip.DestinationService.DTOs.UpdateDestinationHighlightRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationHighlightsController",
+    "Method": "Delete",
+    "RelativePath": "api/Destinations/{destinationId}/highlights/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "destinationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "GetById",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "Update",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "VietTrip.DestinationService.DTOs.UpdateDestinationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "Delete",
+    "RelativePath": "api/Destinations/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VietTrip.DestinationService.Controllers.DestinationsController",
+    "Method": "GetBySlug",
+    "RelativePath": "api/Destinations/slug/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

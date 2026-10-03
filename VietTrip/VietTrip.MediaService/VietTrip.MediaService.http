@@ -1,0 +1,6 @@
+@VietTrip.MediaService_HostAddress = http://localhost:5085
+
+GET {{VietTrip.MediaService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
