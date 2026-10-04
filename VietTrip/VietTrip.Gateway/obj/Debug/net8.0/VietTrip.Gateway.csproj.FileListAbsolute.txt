@@ -30,3 +30,4 @@ D:\VietTrip\VietTrip\VietTrip.Gateway\bin\Debug\net8.0\System.IO.Hashing.dll
 D:\VietTrip\VietTrip\VietTrip.Gateway\bin\Debug\net8.0\Yarp.ReverseProxy.dll
 D:\VietTrip\VietTrip\VietTrip.Gateway\obj\Debug\net8.0\VietTrip.Gateway.csproj.AssemblyReference.cache
 D:\VietTrip\VietTrip\VietTrip.Gateway\obj\Debug\net8.0\VietTrip.E5D4635A.Up2Date
+D:\VietTrip\VietTrip\VietTrip.Gateway\obj\Debug\net8.0\VietTrip.Gateway.sourcelink.json

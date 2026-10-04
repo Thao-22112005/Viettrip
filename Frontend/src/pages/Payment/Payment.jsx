@@ -32,6 +32,13 @@ function Payment() {
     const [paying, setPaying] = useState(false);
     const [error, setError] = useState("");
 
+    // THÊM ĐOẠN NÀY
+    const paymentMethodMap = {
+        vnpay: "Online",
+        bank: "BankTransfer",
+        later: "Cash",
+    };
+
     // ==========================================
     // LOAD BOOKING + TOUR + SCHEDULE
     // ==========================================
@@ -143,16 +150,13 @@ function Payment() {
     // PAYMENT
     // ==========================================
 
+
+    // ==========================================
+    // PAYMENT
+    // ==========================================
     const handlePayment = async () => {
         if (!agreed) {
-            return;
-        }
-
-        if (!booking?.id) {
-            setError(
-                "Không tìm thấy mã booking. Vui lòng quay lại đặt tour."
-            );
-
+            setError("Vui lòng đồng ý với điều khoản.");
             return;
         }
 
@@ -160,53 +164,127 @@ function Payment() {
             setPaying(true);
             setError("");
 
-            const paymentMethodMap = {
-                vnpay: "Online",
-                bank: "BankTransfer",
-                later: "Cash",
-            };
-
-            const response = await api.post(
+            // ==========================================
+            // BƯỚC 1: TẠO PAYMENT
+            // ==========================================
+            const createResponse = await api.post(
                 "/api/Payments",
                 {
-                    bookingId: Number(
-                        booking.id
-                    ),
-
-                    paymentMethod:
-                        paymentMethodMap[method],
+                    bookingId: Number(booking.id),
+                    paymentMethod: paymentMethodMap[method],
                 }
             );
 
-            const payment = response.data;
+            const createdPayment = createResponse.data;
 
+            console.log(
+                "Payment vừa tạo:",
+                createdPayment
+            );
+
+            // ==========================================
+            // PHƯƠNG THỨC 3:
+            // THANH TOÁN KHI XÁC NHẬN
+            // ==========================================
+            //
+            // Cash chỉ tạo Payment = Pending.
+            // Không được chuyển sang Paid ngay.
+            //
+            if (method === "later") {
+                localStorage.setItem(
+                    "viettrip_payment",
+                    JSON.stringify(createdPayment)
+                );
+
+                alert(
+                    "Đặt tour thành công! Đơn hàng đang chờ Admin xác nhận."
+                );
+
+                navigate("/booking-success", {
+                    state: {
+                        booking: {
+                            ...booking,
+                            status: "Pending",
+                        },
+                        payment: createdPayment,
+                    },
+                });
+
+                return;
+            }
+
+            // ==========================================
+            // PHƯƠNG THỨC 1 + 2
+            // VNPAY / BANK TRANSFER
+            // ==========================================
+            //
+            // Mô phỏng thanh toán thành công.
+            // Trong thực tế sẽ là callback từ
+            // VNPay / ngân hàng.
+            //
+            const paidResponse = await api.put(
+                `/api/Payments/${createdPayment.id}/status`,
+                {
+                    status: "Paid",
+                    transactionId: `MOCK-${Date.now()}`,
+                }
+            );
+
+            const payment = paidResponse.data;
+
+            console.log(
+                "Payment sau khi thanh toán:",
+                payment
+            );
+
+            // ==========================================
+            // KIỂM TRA PAYMENT
+            // ==========================================
+            if (payment.status !== "Paid") {
+                throw new Error(
+                    "Thanh toán chưa được xác nhận."
+                );
+            }
+
+            // ==========================================
+            // LƯU PAYMENT
+            // ==========================================
             localStorage.setItem(
                 "viettrip_payment",
                 JSON.stringify(payment)
             );
 
+            // ==========================================
+            // CHUYỂN SANG BOOKING SUCCESS
+            // ==========================================
             navigate("/booking-success", {
                 state: {
-                    booking,
+                    booking: {
+                        ...booking,
+                        status: "Paid",
+                    },
                     payment,
                 },
             });
-
         } catch (err) {
             console.error(
-                "Payment error:",
+                "Lỗi thanh toán:",
                 err
             );
 
             const message =
-                err.response?.data?.message ||
-                "Không thể tạo thanh toán. Vui lòng thử lại.";
+                err?.response?.data?.message ||
+                err?.response?.data?.title ||
+                "Thanh toán thất bại. Vui lòng thử lại.";
 
             setError(message);
         } finally {
             setPaying(false);
         }
     };
+
+
+
 
     // ==========================================
     // LOADING

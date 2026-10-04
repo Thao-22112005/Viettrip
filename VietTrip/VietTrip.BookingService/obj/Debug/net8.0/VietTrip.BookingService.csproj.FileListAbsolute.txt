@@ -145,3 +145,4 @@ D:\VietTrip\VietTrip\VietTrip.BookingService\obj\Debug\net8.0\VietTrip.BookingSe
 D:\VietTrip\VietTrip\VietTrip.BookingService\obj\Debug\net8.0\VietTrip.BookingService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.BookingService\obj\Debug\net8.0\ref\VietTrip.BookingService.dll
 D:\VietTrip\VietTrip\VietTrip.BookingService\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\VietTrip\VietTrip\VietTrip.BookingService\obj\Debug\net8.0\VietTrip.BookingService.sourcelink.json

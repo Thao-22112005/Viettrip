@@ -144,3 +144,4 @@ D:\VietTrip\VietTrip\VietTrip.DestinationService\obj\Debug\net8.0\refint\VietTri
 D:\VietTrip\VietTrip\VietTrip.DestinationService\obj\Debug\net8.0\VietTrip.DestinationService.pdb
 D:\VietTrip\VietTrip\VietTrip.DestinationService\obj\Debug\net8.0\VietTrip.DestinationService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.DestinationService\obj\Debug\net8.0\ref\VietTrip.DestinationService.dll
+D:\VietTrip\VietTrip\VietTrip.DestinationService\obj\Debug\net8.0\VietTrip.DestinationService.sourcelink.json

@@ -100,14 +100,14 @@ function Destination() {
     }, []);
 
     return (
-        <div className="destination-page">
+        <div className="destination-page-ddd">
 
             {/* HERO */}
-            <section className="destination-hero">
-                <div className="destination-hero-overlay"></div>
+            <section className="destination-hero-ddd">
+                <div className="destination-hero-overlay-ddd"></div>
 
-                <div className="destination-hero-content">
-                    <span className="destination-badge">
+                <div className="destination-hero-content-ddd">
+                    <span className="destination-badge-ddd">
                         ✦ KHÁM PHÁ VIỆT NAM
                     </span>
 

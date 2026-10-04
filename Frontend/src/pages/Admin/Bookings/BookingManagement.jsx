@@ -449,6 +449,46 @@ function BookingManagement() {
         }
     };
 
+
+    // =========================
+    // COMPLETE BOOKING
+    // =========================
+    const handleCompleteBooking = async (booking) => {
+        const confirmed = window.confirm(
+            `Xác nhận tour ${booking.bookingCode} đã hoàn thành?`
+        );
+
+        if (!confirmed) {
+            return;
+        }
+
+        try {
+            await api.put(
+                `/api/Bookings/${booking.id}/status`,
+                {
+                    status: "Completed",
+                }
+            );
+
+            await loadBookings();
+            setSelectedBooking(null);
+
+            alert("Đã xác nhận tour hoàn thành.");
+        } catch (err) {
+            console.error(
+                "Complete booking error:",
+                err
+            );
+
+            alert(
+                err.response?.data?.message ||
+                "Không thể xác nhận tour hoàn thành."
+            );
+        }
+    };
+
+
+
     // =========================
     // CANCEL BOOKING
     // =========================
@@ -905,6 +945,19 @@ function BookingManagement() {
                                                                     </button>
                                                                 )}
 
+
+                                                            {booking.status === "Paid" && (
+                                                                <button
+                                                                    type="button"
+                                                                    className="booking-action-confirm"
+                                                                    onClick={() =>
+                                                                        handleCompleteBooking(booking)
+                                                                    }
+                                                                >
+                                                                    Hoàn thành
+                                                                </button>
+                                                            )}
+
                                                             {booking.status !==
                                                                 "Cancelled" &&
                                                                 booking.status !==
@@ -1190,6 +1243,19 @@ function BookingManagement() {
                                         Xác nhận booking
                                     </button>
                                 )}
+                            {selectedBooking.status === "Paid" && (
+                                <button
+                                    type="button"
+                                    className="modal-action-confirm"
+                                    onClick={() =>
+                                        handleCompleteBooking(selectedBooking)
+                                    }
+                                >
+                                    Xác nhận hoàn thành
+                                </button>
+                            )}
+
+
 
                             {selectedBooking.status !==
                                 "Cancelled" &&

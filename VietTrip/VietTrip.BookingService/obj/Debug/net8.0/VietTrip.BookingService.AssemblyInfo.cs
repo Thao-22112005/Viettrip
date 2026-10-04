@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VietTrip.BookingService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f55a94ea029cd0038b6f48e6b5ebf9b2e551cbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("VietTrip.BookingService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VietTrip.BookingService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

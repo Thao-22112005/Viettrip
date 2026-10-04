@@ -174,7 +174,7 @@ function Navbar() {
                                     </Link>
 
                                     <Link
-                                        to="/review"
+                                        to="/my-reviews"
                                         className="account-dropdown-item"
                                     >
                                         ⭐ Đánh giá của tôi

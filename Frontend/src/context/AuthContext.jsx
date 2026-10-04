@@ -1,3 +1,4 @@
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext(null);
@@ -8,14 +9,21 @@ export function AuthProvider({ children }) {
 
     useEffect(() => {
         const savedUser = localStorage.getItem("viettrip_user");
+        const token = localStorage.getItem("token");
 
-        if (savedUser) {
+        // Chỉ khôi phục user khi có cả user và token
+        if (savedUser && token) {
             try {
                 setUser(JSON.parse(savedUser));
             } catch {
                 localStorage.removeItem("viettrip_user");
+                localStorage.removeItem("token");
                 setUser(null);
             }
+        } else {
+            // Không có token thì coi như chưa đăng nhập
+            localStorage.removeItem("viettrip_user");
+            setUser(null);
         }
 
         setLoading(false);
@@ -75,3 +83,4 @@ export function useAuth() {
 
     return context;
 }
+

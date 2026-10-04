@@ -39,3 +39,4 @@ D:\VietTrip\VietTrip\VietTrip.NotificationService\obj\Debug\net8.0\refint\VietTr
 D:\VietTrip\VietTrip\VietTrip.NotificationService\obj\Debug\net8.0\VietTrip.NotificationService.pdb
 D:\VietTrip\VietTrip\VietTrip.NotificationService\obj\Debug\net8.0\VietTrip.NotificationService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.NotificationService\obj\Debug\net8.0\ref\VietTrip.NotificationService.dll
+D:\VietTrip\VietTrip\VietTrip.NotificationService\obj\Debug\net8.0\VietTrip.NotificationService.sourcelink.json

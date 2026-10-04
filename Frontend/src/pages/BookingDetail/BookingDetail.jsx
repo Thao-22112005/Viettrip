@@ -1,8 +1,7 @@
+
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
 import "./BookingDetail.css";
-
 import api from "../../services/api";
 import { useAuth } from "../../context/AuthContext";
 
@@ -77,6 +76,9 @@ function getPaymentStatus(status) {
         case "Failed":
             return "Thanh toán thất bại";
 
+        case "RefundRequested":
+            return "Đang yêu cầu hoàn tiền";
+
         case "Refunded":
             return "Đã hoàn tiền";
 
@@ -98,6 +100,9 @@ function BookingDetail() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
+    // Trạng thái gửi yêu cầu hoàn tiền
+    const [requestingRefund, setRequestingRefund] = useState(false);
+
     useEffect(() => {
         const fetchBookingDetail = async () => {
             try {
@@ -114,9 +119,7 @@ function BookingDetail() {
                 const bookingData = bookingResponse.data;
 
                 if (!bookingData) {
-                    setError(
-                        "Không tìm thấy đơn đặt tour."
-                    );
+                    setError("Không tìm thấy đơn đặt tour.");
                     return;
                 }
 
@@ -149,9 +152,7 @@ function BookingDetail() {
                 const scheduleData = schedules.find(
                     (item) =>
                         Number(item.id) ===
-                        Number(
-                            bookingData.tourScheduleId
-                        )
+                        Number(bookingData.tourScheduleId)
                 );
 
                 setSchedule(scheduleData || null);
@@ -160,13 +161,16 @@ function BookingDetail() {
                 // 4. LẤY PAYMENT
                 // ==========================================
                 try {
-                    const paymentResponse =
-                        await api.get(
-                            `/api/Payments/booking/${bookingData.id}`
-                        );
+                    const paymentResponse = await api.get(
+                        `/api/Payments/booking/${bookingData.id}`
+                    );
+
+                    const paymentData = paymentResponse.data;
 
                     setPayment(
-                        paymentResponse.data || null
+                        Array.isArray(paymentData)
+                            ? paymentData[0] || null
+                            : paymentData || null
                     );
                 } catch (paymentError) {
                     console.warn(
@@ -226,6 +230,71 @@ function BookingDetail() {
         }
     }, [id, isAuthenticated, user?.userId]);
 
+    // ==========================================
+    // YÊU CẦU HOÀN TIỀN
+    // ==========================================
+    const handleRefundRequest = async () => {
+        if (!payment?.id) {
+            alert(
+                "Không tìm thấy thông tin thanh toán."
+            );
+            return;
+        }
+
+        if (payment.status !== "Paid") {
+            alert(
+                "Đơn hàng chưa đủ điều kiện yêu cầu hoàn tiền."
+            );
+            return;
+        }
+
+        const confirmed = window.confirm(
+            "Bạn có chắc chắn muốn yêu cầu hoàn tiền cho đơn đặt tour này?"
+        );
+
+        if (!confirmed) {
+            return;
+        }
+
+        try {
+            setRequestingRefund(true);
+            setError("");
+
+            const response = await api.put(
+                `/api/Payments/${payment.id}/status`,
+                {
+                    status: "RefundRequested",
+                }
+            );
+
+            const updatedPayment = response.data;
+
+            setPayment(updatedPayment);
+
+            alert(
+                "Đã gửi yêu cầu hoàn tiền. Vui lòng chờ VietTrip xác nhận."
+            );
+        } catch (err) {
+            console.error(
+                "Lỗi yêu cầu hoàn tiền:",
+                err
+            );
+
+            const message =
+                err?.response?.data?.message ||
+                err?.response?.data?.title ||
+                "Không thể gửi yêu cầu hoàn tiền. Vui lòng thử lại.";
+
+            setError(message);
+            alert(message);
+        } finally {
+            setRequestingRefund(false);
+        }
+    };
+
+    // ==========================================
+    // LOADING
+    // ==========================================
     if (loading) {
         return (
             <div className="booking-detail-page-sss">
@@ -246,6 +315,9 @@ function BookingDetail() {
         );
     }
 
+    // ==========================================
+    // ERROR
+    // ==========================================
     if (error || !booking) {
         return (
             <div className="booking-detail-page-sss">
@@ -318,6 +390,7 @@ function BookingDetail() {
     return (
         <div className="booking-detail-page-sss">
             <div className="booking-detail-container-sss">
+
                 {/* Breadcrumb */}
                 <div className="booking-breadcrumb-sss">
                     <Link to="/">
@@ -332,7 +405,9 @@ function BookingDetail() {
 
                     <span>/</span>
 
-                    <span>Chi tiết đơn</span>
+                    <span>
+                        Chi tiết đơn
+                    </span>
                 </div>
 
                 {/* Header */}
@@ -358,8 +433,10 @@ function BookingDetail() {
                 </div>
 
                 <div className="booking-detail-layout-sss">
+
                     {/* LEFT */}
                     <div className="booking-detail-main-sss">
+
                         {/* Tour information */}
                         <section className="detail-card-sss tour-info-card-sss">
                             <div className="card-title-sss">
@@ -436,6 +513,7 @@ function BookingDetail() {
                             </div>
 
                             <div className="trip-info-grid-sss">
+
                                 <div className="info-item-sss">
                                     <span className="info-label-sss">
                                         Ngày khởi hành
@@ -477,9 +555,12 @@ function BookingDetail() {
                                     </span>
 
                                     <strong>
-                                        {formatDate(booking.createdAt)}
+                                        {formatDate(
+                                            booking.createdAt
+                                        )}
                                     </strong>
                                 </div>
+
                             </div>
                         </section>
 
@@ -496,6 +577,7 @@ function BookingDetail() {
                             </div>
 
                             <div className="customer-info-grid-sss">
+
                                 <div className="info-item-sss">
                                     <span className="info-label-sss">
                                         Họ và tên
@@ -535,6 +617,7 @@ function BookingDetail() {
                                         {customerAddress}
                                     </strong>
                                 </div>
+
                             </div>
                         </section>
 
@@ -551,6 +634,7 @@ function BookingDetail() {
                             </div>
 
                             <div className="payment-info-list-sss">
+
                                 <div className="payment-info-row-sss">
                                     <span>
                                         Phương thức thanh toán
@@ -580,12 +664,14 @@ function BookingDetail() {
                                         {paidAt}
                                     </strong>
                                 </div>
+
                             </div>
                         </section>
                     </div>
 
                     {/* RIGHT */}
                     <aside className="booking-detail-sidebar-sss">
+
                         {/* Order summary */}
                         <div className="detail-card-sss summary-card-sss">
                             <div className="card-title-sss">
@@ -658,6 +744,7 @@ function BookingDetail() {
                             </div>
 
                             <div className="booking-timeline-sss">
+
                                 <div className="timeline-item-sss completed">
                                     <div className="timeline-dot-sss">
                                         ✓
@@ -724,18 +811,60 @@ function BookingDetail() {
                                         </span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
                         {/* Actions */}
                         <div className="booking-actions-sss">
-                            {booking.status ===
-                                "Confirmed" && (
-                                    <button className="cancel-booking-button-sss">
+
+                            {(booking.status ===
+                                "Confirmed" || booking.status === "Pending") && (
+                                    <button
+                                        type="button"
+                                        className="cancel-booking-button-sss"
+                                    >
                                         Hủy đơn đặt tour
                                     </button>
                                 )}
 
+                            {/* Yêu cầu hoàn tiền */}
+                            {payment?.status === "Paid" && (
+                                <button
+                                    type="button"
+                                    className="refund-booking-button-sss"
+                                    onClick={
+                                        handleRefundRequest
+                                    }
+                                    disabled={
+                                        requestingRefund
+                                    }
+
+                                >
+                                    {requestingRefund
+                                        ? "Đang gửi yêu cầu..."
+                                        : "↩ Yêu cầu hoàn tiền"}
+                                </button>
+                            )}
+
+                            {/* Đang chờ Admin xử lý */}
+                            {payment?.status ===
+                                "RefundRequested" && (
+                                    <div className="refund-pending-message-sss">
+                                        ⏳ Đang chờ VietTrip xác nhận
+                                        hoàn tiền
+                                    </div>
+                                )}
+
+                            {/* Đã hoàn tiền */}
+                            {payment?.status ===
+                                "Refunded" && (
+                                    <div className="refund-success-message-sss">
+                                        ✓ Đã hoàn tiền
+                                    </div>
+                                )}
+
+                            {/* Đánh giá */}
                             {booking.status ===
                                 "Completed" && (
                                     <Link
@@ -746,12 +875,14 @@ function BookingDetail() {
                                     </Link>
                                 )}
 
+                            {/* Quay lại */}
                             <Link
                                 to="/bookings"
                                 className="back-bookings-button-sss"
                             >
                                 ← Quay lại đơn đặt tour
                             </Link>
+
                         </div>
                     </aside>
                 </div>
@@ -761,3 +892,4 @@ function BookingDetail() {
 }
 
 export default BookingDetail;
+

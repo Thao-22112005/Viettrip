@@ -246,9 +246,6 @@
   "components": {
     "schemas": {
       "CreateReviewRequest": {
-        "required": [
-          "comment"
-        ],
         "type": "object",
         "properties": {
           "userId": {
@@ -277,8 +274,8 @@
           },
           "comment": {
             "maxLength": 2000,
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

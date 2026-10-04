@@ -159,6 +159,20 @@ function AdminLayout() {
                     </NavLink>
 
                     <NavLink
+                        to="/admin/tour-schedules"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "admin-nav-link active"
+                                : "admin-nav-link"
+                        }
+                    >
+                        <span className="admin-nav-icon">
+                            ◷
+                        </span>
+                        <span>Schedules</span>
+                    </NavLink>
+
+                    <NavLink
                         to="/admin/categories"
                         className={({ isActive }) =>
                             isActive

@@ -145,3 +145,4 @@ D:\VietTrip\VietTrip\VietTrip.PaymentService\obj\Debug\net8.0\VietTrip.PaymentSe
 D:\VietTrip\VietTrip\VietTrip.PaymentService\obj\Debug\net8.0\VietTrip.PaymentService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.PaymentService\obj\Debug\net8.0\ref\VietTrip.PaymentService.dll
 D:\VietTrip\VietTrip\VietTrip.PaymentService\bin\Debug\net8.0\RabbitMQ.Client.dll
+D:\VietTrip\VietTrip\VietTrip.PaymentService\obj\Debug\net8.0\VietTrip.PaymentService.sourcelink.json

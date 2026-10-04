@@ -145,3 +145,4 @@ D:\VietTrip\VietTrip\VietTrip.ReviewService\obj\Debug\net8.0\VietTrip.ReviewServ
 D:\VietTrip\VietTrip\VietTrip.ReviewService\obj\Debug\net8.0\VietTrip.ReviewService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.ReviewService\obj\Debug\net8.0\ref\VietTrip.ReviewService.dll
 D:\VietTrip\VietTrip\VietTrip.ReviewService\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\VietTrip\VietTrip\VietTrip.ReviewService\obj\Debug\net8.0\VietTrip.ReviewService.sourcelink.json

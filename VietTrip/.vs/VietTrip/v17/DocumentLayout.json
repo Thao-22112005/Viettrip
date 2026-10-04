@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VietTrip\\VietTrip\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA1F1E1F-A892-4262-B1CE-509FD6A5521B}|VietTrip.ReviewService\\VietTrip.ReviewService.csproj|d:\\viettrip\\viettrip\\viettrip.reviewservice\\dtos\\createreviewrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA1F1E1F-A892-4262-B1CE-509FD6A5521B}|VietTrip.ReviewService\\VietTrip.ReviewService.csproj|solutionrelative:viettrip.reviewservice\\dtos\\createreviewrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEB93B93-14A0-4D75-83B3-115B691970CB}|VietTrip.PaymentService\\VietTrip.PaymentService.csproj|d:\\viettrip\\viettrip\\viettrip.paymentservice\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEB93B93-14A0-4D75-83B3-115B691970CB}|VietTrip.PaymentService\\VietTrip.PaymentService.csproj|solutionrelative:viettrip.paymentservice\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateReviewRequest.cs",
+              "DocumentMoniker": "D:\\VietTrip\\VietTrip\\VietTrip.ReviewService\\DTOs\\CreateReviewRequest.cs",
+              "RelativeDocumentMoniker": "VietTrip.ReviewService\\DTOs\\CreateReviewRequest.cs",
+              "ToolTip": "D:\\VietTrip\\VietTrip\\VietTrip.ReviewService\\DTOs\\CreateReviewRequest.cs",
+              "RelativeToolTip": "VietTrip.ReviewService\\DTOs\\CreateReviewRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T06:22:37.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "D:\\VietTrip\\VietTrip\\VietTrip.PaymentService\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "VietTrip.PaymentService\\Controllers\\PaymentsController.cs",
+              "ToolTip": "D:\\VietTrip\\VietTrip\\VietTrip.PaymentService\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "VietTrip.PaymentService\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAL0BAAAAAAAAAADwv90BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T06:02:54.701Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

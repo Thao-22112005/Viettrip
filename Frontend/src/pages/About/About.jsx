@@ -67,7 +67,7 @@ function About() {
                     <h1>
                         Cùng VietTrip
                         <br />
-                        khám phá Việt Nam
+                        <span>khám phá Việt Nam</span>
                     </h1>
 
                     <p>

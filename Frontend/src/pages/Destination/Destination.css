@@ -1,4 +1,4 @@
-.destination-page {
+.destination-page-ddd {
 
     min-height: 100vh;
 
@@ -10,7 +10,7 @@
    HERO
 ========================= */
 
-.destination-hero {
+.destination-hero-ddd {
 
     position: relative;
 
@@ -32,7 +32,7 @@
 
 }
 
-.destination-hero-overlay {
+.destination-hero-overlay-ddd {
 
     position: absolute;
 
@@ -46,7 +46,7 @@
 
 }
 
-.destination-hero-content {
+.destination-hero-content-ddd {
 
     position: relative;
 
@@ -68,7 +68,7 @@
 
 }
 
-.destination-badge {
+.destination-badge-ddd {
 
     display: inline-block;
 
@@ -94,27 +94,29 @@
 
 
 
-.destination-hero h1 {
+.destination-hero-ddd h1 {
 
     margin: 0 0 18px;
 
     color: #ffffff;
 
-    font-size: 48px;
+    font-size: clamp(38px, 5vw, 56px);
 
-    line-height: 1.15;
+    line-height: 1.1;
 
-    font-weight: 700;
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
 
 }
 
-.destination-hero h1 span {
+.destination-hero-ddd h1 span {
 
     color: #35d0c8;
 
 }
 
-.destination-hero p {
+.destination-hero-ddd p {
 
     margin: 0 0 28px;
 
@@ -729,12 +731,6 @@
 
     }
 
-    .destination-hero h1 {
-
-        font-size: 42px;
-
-    }
-
 }
 
 /* =========================
@@ -743,25 +739,25 @@
 
 @media (max-width: 700px) {
 
-    .destination-hero {
+    .destination-hero-ddd {
 
         min-height: 500px;
 
     }
 
-    .destination-hero-content {
+    .destination-hero-content-ddd {
 
         padding: 55px 16px;
 
     }
 
-    .destination-hero h1 {
+    .destination-hero-ddd h1 {
 
-        font-size: 35px;
+        font-size: 40px;
 
     }
 
-    .destination-hero p {
+    .destination-hero-ddd p {
 
         font-size: 14px;
 
@@ -851,15 +847,9 @@
 
 @media (max-width: 450px) {
 
-    .destination-hero {
+    .destination-hero-ddd {
 
         min-height: 480px;
-
-    }
-
-    .destination-hero h1 {
-
-        font-size: 30px;
 
     }
 
@@ -1055,7 +1045,7 @@
 
     margin-bottom: 6px;
 
-    color: #08a6a6;
+    color: #08a6a6 !important;
 
     font-size: 11px;
 

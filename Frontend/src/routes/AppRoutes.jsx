@@ -15,6 +15,7 @@ import BookingList from "../pages/Bookings/BookingList";
 import BookingDetail from "../pages/BookingDetail/BookingDetail";
 
 import Review from "../pages/Review/Review";
+import MyReviews from "../pages/Review/MyReview";
 
 import Destination from "../pages/Destination/Destination";
 import DestinationDetail from "../pages/DestinationDetail/DestinationDetail";
@@ -41,6 +42,7 @@ import UserManagement from "../pages/Admin/Users/UserManagement";
 import ReviewManagement from "../pages/Admin/Reviews/ReviewManagement";
 import MediaManagement from "../pages/Admin/Media/MediaManagement";
 import AdminProfile from "../pages/Admin/Profile/AdminProfile";
+import TourSchedules from "../pages/Admin/Schedules/TourSchedules";
 
 import ProtectedRoute from "../routes/ProtectedRoute";
 import AdminRoute from "../routes/AdminRoute";
@@ -103,6 +105,11 @@ function AppRoutes() {
                     <Route
                         path="/review"
                         element={<Review />}
+                    />
+
+                    <Route
+                        path="/my-reviews"
+                        element={<MyReviews />}
                     />
 
                     {/* Destination */}
@@ -178,6 +185,7 @@ function AppRoutes() {
                         <Route path="reviews" element={<ReviewManagement />} />
                         <Route path="media" element={<MediaManagement />} />
                         <Route path="profile" element={<AdminProfile />} />
+                        <Route path="tour-schedules" element={<TourSchedules />} />
                     </Route>
                 </Route>
 

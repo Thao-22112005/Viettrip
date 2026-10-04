@@ -144,3 +144,4 @@ D:\VietTrip\VietTrip\VietTrip.CategoryService\obj\Debug\net8.0\refint\VietTrip.C
 D:\VietTrip\VietTrip\VietTrip.CategoryService\obj\Debug\net8.0\VietTrip.CategoryService.pdb
 D:\VietTrip\VietTrip\VietTrip.CategoryService\obj\Debug\net8.0\VietTrip.CategoryService.genruntimeconfig.cache
 D:\VietTrip\VietTrip\VietTrip.CategoryService\obj\Debug\net8.0\ref\VietTrip.CategoryService.dll
+D:\VietTrip\VietTrip\VietTrip.CategoryService\obj\Debug\net8.0\VietTrip.CategoryService.sourcelink.json

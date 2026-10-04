@@ -136,8 +136,8 @@
 /* Absolute breadcrumb in hero (match Destination Detail) */
 .about-hero .about-breadcrumb {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: -20px;
+    left: -150px;
     font-size: 110%;
     margin: 0;
     color: rgba(255, 255, 255, 0.95);
